@@ -1,0 +1,49 @@
+<!doctype html>
+<html> 
+ <head></head> 
+ <body> 
+  <h1> Hello </h1> 
+  <div>
+    This is a html example from Dcoder, 
+   <br> have fun. :) 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">const styles = `
+    <style>
+        .definition {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .intelligent {
+            background-color: lightgreen;
+        }
+
+        .debile {
+            background-color: lightcoral;
+        }
+    </style>
+`;
+
+const definitions = [
+    { term: "Intelligent", definition: "N'oublie pas son ordinateur" },
+    { term: "Débile", definition: "Oublie son ordinateur" }
+];
+
+function generateHTML() {
+    let html = styles;
+
+    definitions.forEach(item => {
+        html += `
+            <div class="definition ${item.term.toLowerCase()}">
+                <h3>${item.term}</h3>
+                <p>${item.definition}</p>
+            </div>
+        `;
+    });
+
+    document.body.innerHTML = html;
+}
+
+generateHTML();</script></body></html>
